@@ -9,12 +9,13 @@ public class AnimalDAO {
         this.connection = new Conexao().GeraConexao();
     }
     public void adiciona(Animal a) {
-        String sql = "INSERT INTO Animal (nome, idade, peso) VALUES(?, ?, ?)";
+        String sql = "INSERT INTO Animal (nome, idade, peso) VALUES(?, ?, ?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, a.getNome());
             stmt.setInt(2, a.getIdade());
             stmt.setDouble(3, a.getPeso());
+            stmt.setString(4, a.getAnimal());
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
