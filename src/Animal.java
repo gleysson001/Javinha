@@ -2,6 +2,7 @@ public class Animal {
     protected int idade;
     protected double peso;
     protected String nome;
+    protected String animal;
 
     public Animal(){
 
@@ -11,6 +12,7 @@ public class Animal {
         this.idade = idade;
         this.peso = peso;
         this.nome = nome;
+        this.animal = animal;
     }
 
     @Override
@@ -19,7 +21,16 @@ public class Animal {
                 "idade=" + idade +
                 ", peso=" + peso +
                 ", nome='" + nome + '\'' +
+                ", animal='" + animal + '\'' +
                 '}';
+    }
+
+    public String getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(String animal) {
+        this.animal = animal;
     }
 
     public int getIdade() {

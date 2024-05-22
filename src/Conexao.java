@@ -5,7 +5,7 @@ public class Conexao {
     public static Connection GeraConexao() {
         Connection conexao = null;
         try{
-            String url = "jdbc:mysql://localhost/aulaconexao2024";
+            String url = "jdbc:mysql://localhost/Query 1";
             String usuario = "root";
             String senha = "sqllabs";
             conexao = DriverManager.getConnection(url,usuario,senha);
